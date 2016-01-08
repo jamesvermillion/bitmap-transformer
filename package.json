@@ -1,0 +1,32 @@
+{
+  "name": "bitmap-transformer",
+  "version": "1.0.0",
+  "description": "Bitmap transformer developed for Code Fellows 401 course",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bitmap-bitties/bitmap-transformer.git"
+  },
+  "keywords": [
+    "bitmap"
+  ],
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "eslint": "^1.10.3",
+    "gulp": "^3.9.0",
+    "gulp-eslint": "^1.1.1",
+    "gulp-mocha": "^2.2.0"
+  },
+  "author": "Jim Vermillion Darcy Lambrecht Jesse Thach",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Bitmap-bitties/bitmap-transformer/issues"
+  },
+  "homepage": "https://github.com/Bitmap-bitties/bitmap-transformer#readme"
+}
