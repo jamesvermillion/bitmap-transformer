@@ -8,8 +8,8 @@ var files = ['gulpfile.js', './lib/*.js', './test/*.js',
 gulp.task('lint', function() {
   return gulp.src(files)
   .pipe(eslint(
-    { 
-      'rules': { 
+    {
+      'rules': {
         'indent': [
           2,
           2
@@ -40,13 +40,13 @@ gulp.task('lint', function() {
 });
 
 gulp.task('mocha', function() {
-  return gulp.src('test/greet_test.js')
-  .pipe(mocha({reporter: 'nyan'}))
-  .pipe(mocha({timeout: 2000}));
+  return gulp.src('test/bitmap_test.js')
+  .pipe(mocha({reporter: 'nyan'}));
+  // .pipe(mocha({timeout: 2000}));
 });
 
 gulp.task('watch', function() {
-  return gulp.watch(files, ['lint']);
+  return gulp.watch(files, ['lint', 'mocha']);
 });
 
 gulp.task('default', ['watch', 'lint', 'mocha']);
