@@ -1,4 +1,4 @@
-var bitmap = require(__dirname + '/../lib/bitmap_data_reader.js');
+var meta = require('./../lib/bitmap_data_reader.js');
 var expect = require('chai').expect;
 // var dummy = { type: 'BM',
 //   size: 30054,
@@ -8,10 +8,12 @@ var expect = require('chai').expect;
 //   numColors: 0,
 //   endianness: 'LE' };
 
+var bm = setTimeout(meta('./images/non-palette-bitmap.bmp').type, 12);
 
 describe('testing emitter', function() {
   beforeEach(function() {
     this.processBackup = process.argv;
+    
     process.argv = ['node', 'bitmap_data_reader.js', './images/non-palette-bitmap.bmp'];
   });
 
@@ -19,7 +21,8 @@ describe('testing emitter', function() {
     process.argv = this.processBackup;
   });
 
-  it('should show metaData', function() {
-    expect(bitmap()).to.eql('string');
+  it('should show metaData', function(done) {
+    expect(bm).to.eql('BM');
+    done();
   });
 });
