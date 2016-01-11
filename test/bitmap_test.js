@@ -1,9 +1,9 @@
-const colorArray = [[1,1,1,],[2,2,2],[3,3,3]];
-const grayArray = [[1,1,1,],[2,2,2],[3,3,3]];
+const colorArray = [[1,1,1,],[2,2,2],[3,3,3]];//eslint-disable-line
+const grayArray = [[1,1,1,],[2,2,2],[3,3,3]];//eslint-disable-line
 const redArray = [[3,1,1],[6,2,2],[9,3,3]];
 const invertArray = [249,253,253];
 
-var meta = require('./../lib/bitmap_data_reader.js').meta;
+var meta = require('./../lib/bitmap_data_reader.js').meta;//eslint-disable-line
 var expect = require('chai').expect;
 var gray = require('./../lib/transform.js').gray;
 var red = require('./../lib/transform.js').red;
