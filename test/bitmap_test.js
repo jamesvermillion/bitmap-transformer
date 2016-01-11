@@ -1,23 +1,18 @@
-var meta = require('./../lib/bitmap_data_reader.js').meta;
+var gray = require('./../lib/transform.js').gray;
 var expect = require('chai').expect;
 
-var bm = setTimeout(meta('./images/non-palette-bitmap.bmp').type, 12);
-var a = {path: './../images/non-palette-bitmap.bmp'};
-  var m = meta(a);
+var c = [[1,1,1],[2,2,2]];
+var g = gray(c);
+console.log(g);
 
-describe('testing emitter', function() {
-  
-  beforeEach(function() {
-    this.processBackup = process.argv;  
-    process.argv = ['node', 'bitmap_data_reader.js', './images/non-palette-bitmap.bmp'];
-  });
+describe('testing gray', function() {
 
-  afterEach(function() {
-    process.argv = this.processBackup;
-  });
 
-  it('should show metaData', function(done) {
-    setTimeout(expect(bm.startPixelData).to.eql(54), 10);
+
+  it('gray', function(done) {
+    var c = [[1,1,1],[2,2,2]];
+    var g = gray(c);
+    expect(g).to.eql(54);
     done();
   });
 });
